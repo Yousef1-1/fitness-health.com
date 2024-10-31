@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Access Survey</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <h1>Do You Have Access to a Gym?</h1>
+    <button onclick="showResponse('yes')">Yes</button>
+    <button onclick="showResponse('no')">No</button>
+
+    <div id="output"></div>
+</div>
+
+<script>
+    function showResponse(answer) {
+        const output = document.getElementById('output');
+        if (answer === 'yes') {
+            output.innerText = "Great! You can focus on strength training, cardio, and other fitness classes.";
+        } else if (answer === 'no') {
+            output.innerText = "No problem! You can still stay fit with home workouts, outdoor activities, or bodyweight exercises.";
+        } else {
+            output.innerText = "Please answer with 'yes' or 'no'.";
+        }
+    }
+</script>
+
+</body>
+</html>
