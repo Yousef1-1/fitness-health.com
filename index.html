@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started Page</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Ensure html and body take up full viewport dimensions */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set up the background image for the body */
+        body {
+            background-image: url('image.jpg'); /* Replace with the path to your image */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Centered container */
+        .centered {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Button styling */
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: #28A745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #218838; /* Darker on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <h1>Health & Fitness</h1>
+        <a href="2nd page.html" class="button">Get started now</a>
+    </div>
+</body>
+</html>
