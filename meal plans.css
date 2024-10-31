@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #ffcc80; /* Light orange for column headers */
+    font-weight: bold;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.header {
+    background-color: #ffab91; /* Soft salmon for the main header */
+    font-size: 1.5em;
+    text-align: center;
+    color: #4a4a4a;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.section-title {
+    background-color: #ffe0b2; /* Light orange for section titles */
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #4a4a4a;
+    text-align: left;
+}
+
+.sub-section-title {
+    background-color: #ffecb3; /* Soft yellow for sub-section title */
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+    color: #4a4a4a;
+}
+
+td {
+    background-color: #fafafa; /* Soft off-white for table cells */
+    color: #4a4a4a;
+}
+
+td:nth-child(even) {
+    background-color: #fff3e0; /* Light orange for alternate rows */
+}
+
+.section-title:nth-child(odd) {
+    background-color: #ffcc80; /* Alternating orange for section titles */
+}
+
+tr:hover td {
+    background-color: #ffe6cc; /* Light orange highlight on hover */
+}
+
+th, td {
+    border-radius: 4px;
+}
+

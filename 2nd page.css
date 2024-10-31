@@ -1,52 +1,58 @@
-* {
+/* Ensure full height and no margin */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center the items vertically */
+    align-items: center; /* Center the items horizontally */
+    background-color: #e0f7fa; /* Light cyan background color */
     font-family: Arial, sans-serif;
 }
 
-body {
+/* Flex container for buttons */
+.button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
-    position: relative;
+    justify-content: space-between; /* Space buttons to the left and right */
+    width: 100%; /* Full width to spread buttons */
+    max-width: 800px; /* Maximum width for the container */
+    margin-bottom: 20px; /* Space below the button container */
+    padding: 0 20px; /* Added padding for container to create space on the sides */
 }
 
-.center-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
+/* Button styling */
 .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    flex: 1; /* Make buttons equal width */
+    margin: 0 20px; /* Space between buttons */
+    padding: 15px; /* Uniform padding */
+    font-size: 20px; /* Increased font size */
+    color: white; /* White text */
+    background-color: #007BFF; /* Bootstrap primary color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Hover effect for buttons */
 .button:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* Contact button specific styling */
 .contact-button {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+    position: absolute; /* Positioning to absolute */
+    bottom: 20px; /* 20px from the bottom */
+    left: 20px; /* 20px from the left */
+    background-color: #28A745; /* Green color for contact button */
+    padding: 15px; /* Added padding for uniformity */
+    font-size: 20px; /* Increased font size */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
 }
 
 .contact-button:hover {
-    background-color: #0056b3;
+    background-color: #218838; /* Darker green on hover */
 }

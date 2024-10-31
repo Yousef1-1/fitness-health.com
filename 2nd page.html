@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button Layout</title>
-    <link rel="stylesheet" href="2nd page.css">
+    <link rel="stylesheet" href="2nd page.css"> <!-- Updated CSS file link -->
+    <style>
+        /* Increase font size for the heading text */
+        .center-buttons h2 {
+            font-size: 2em;
+            margin-bottom: 50px; /* Adds space between heading and buttons */
+            text-align: center;
+        }
+
+        /* Increase space between buttons */
+        .center-buttons .button {
+            display: inline-block;
+            margin: 10px 20px; /* Adds more space around each button */
+            padding: 10px 20px; /* Ensures button size is comfortable */
+            font-size: 1.2em; /* Increases button text size */
+        }
+
+        /* Center align the button container if not already centered */
+        .center-buttons {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <div class="center-buttons">
-        <button class="button">meal plans</button>
-        <button class="button">workout plans</button>
+        <h2>Your gateway to a better lifestyle!</h2> <!-- Added header text -->
+        <a href="meal plans.html" class="button">Meal Plans</a>
+        <a href="workout plans.html" class="button">Workout Plans</a>
     </div>
     <a href="contact us.html" class="contact-button">Contact Us</a>
 </body>

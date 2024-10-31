@@ -1,40 +1,46 @@
-/* Resetting default styling */
-* {
+/* Ensure html and body take up full viewport dimensions */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
+/* Set up the background color and styling for the body */
+body {
+    background-color: #Add8e6; /* Light blue background */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+    color: #333; /* Dark text color */
 }
 
-.centered {
+/* Centered container styling */
+.container {
     text-align: center;
+    padding: 40px;
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
+/* Button styling */
 .button {
-    display: inline-block;
     padding: 15px 30px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: #28A745; /* Green */
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Heading styling */
+h1 {
+    font-size: 3em; /* Increased font size */
+    margin-bottom: 20px; /* Space below the heading */
 }

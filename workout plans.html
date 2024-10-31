@@ -3,29 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Access Survey</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <title>Weekly Workout Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #e3f2fd; /* Light blue background */
+            flex-direction: column;
+            text-align: center;
+            padding: 20px; 
+        }
+        h1 {
+            color: #0d47a1; /* Dark blue color for the heading */
+            margin-bottom: 20px;
+        }
+        .question-container {
+            background-color: #ffffff; /* White background for question area */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+        .image-container {
+            display: none; /* Hide by default */
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #0d47a1; /* Border color to match heading */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for the image */
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.2s; /* Added transition for transform */
+        }
+        .yes-button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        .yes-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        .no-button {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+        .no-button:hover {
+            background-color: #e53935;
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        @media (max-width: 600px) {
+            button {
+                width: 100%;
+                font-size: 1.2em; /* Larger buttons on smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Do You Have Access to a Gym?</h1>
-    <button onclick="showResponse('yes')">Yes</button>
-    <button onclick="showResponse('no')">No</button>
+<h1>Weekly Workout Plan</h1>
 
-    <div id="output"></div>
+<div class="question-container" id="questionContainer">
+    <p>Do you have access to a gym?</p>
+    <button class="yes-button" onclick="showGymImage()">Yes</button>
+    <button class="no-button" onclick="showHomeImage()">No</button>
+</div>
+
+<div class="image-container" id="workoutImageContainer">
+    <img id="workoutImage" src="" alt="">
 </div>
 
 <script>
-    function showResponse(answer) {
-        const output = document.getElementById('output');
-        if (answer === 'yes') {
-            output.innerText = "Great! You can focus on strength training, cardio, and other fitness classes.";
-        } else if (answer === 'no') {
-            output.innerText = "No problem! You can still stay fit with home workouts, outdoor activities, or bodyweight exercises.";
-        } else {
-            output.innerText = "Please answer with 'yes' or 'no'.";
-        }
+    function showGymImage() {
+        document.getElementById("workoutImage").src = "workout plan.jpg"; // Path to gym workout image
+        document.getElementById("workoutImage").alt = "A detailed weekly workout plan including various exercises for different muscle groups.";
+        document.getElementById("workoutImageContainer").style.display = "block";
+        document.getElementById("questionContainer").style.display = "none";
+    }
+
+    function showHomeImage() {
+        document.getElementById("workoutImage").src = "no equipment workout.jpg"; // Path to home workout image
+        document.getElementById("workoutImage").alt = "A home workout plan for fitness without gym access.";
+        document.getElementById("workoutImageContainer").style.display = "block";
+        document.getElementById("questionContainer").style.display = "none";
     }
 </script>
 
